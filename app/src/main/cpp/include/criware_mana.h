@@ -13,7 +13,7 @@ struct CriWareFsBinder;
 struct CriWareManaMovieInfo;
 struct CriWareManaFrameInfo;
 
-CA(void) criManaUnity_SetConfigParameters(uint32_t graphicsApi, uint32_t numDecoders, uint32_t numMaxEntries, bool_t enableCuePoint);
+CA(uint32_t) criManaUnity_SetConfigParameters(uint32_t graphicsApi, uint32_t numDecoders, uint32_t numMaxEntries, bool_t enableCuePoint);
 CA(void) criManaUnity_Initialize();
 CA(void) criManaUnity_Finalize();
 CA(void) criManaUnity_ExecuteMain();

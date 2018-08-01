@@ -11,5 +11,6 @@ CA(uint32_t) criWareUnity_SetForceCrashFlagOnError(uint32_t a0);
 CA(uint32_t) criWareUnity_SetRenderingEventOffsetForMana(uint32_t a0);
 CA(uint32_t) criAtomUnity_SetConfigAdditionalParameters_PC(uint64_t a0);
 CA(uint32_t) criManaUnity_SetConfigAdditionalParameters_ANDROID(uint32_t a0);
+CA(uint32_t) criAtomUnitySequencer_ExecuteQueuedEventCallbacks();
 
 #endif //CRIWAREUNITYHACK_CRIWARE_UNKNOWN_H

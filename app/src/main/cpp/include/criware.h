@@ -29,6 +29,7 @@
 #include "criware_mana.h"
 #include "criware_misc.h"
 #include "criware_unknown.h"
+#include "criware_unity_plugin.h"
 #include "dbghelper.h"
 
 typedef struct _CriWareUnityApi {
@@ -520,7 +521,7 @@ typedef struct _CriWareUnityApi {
     CAI(uint32_t) (*criFsLoader_SetReadUnitSize)(CriWareFsLoader *loader, uint64_t unitSize);
 
     // criware_mana
-    CAI(void) (*criManaUnity_SetConfigParameters)(uint32_t graphicsApi, uint32_t numDecoders, uint32_t numMaxEntries, bool_t enableCuePoint);
+    CAI(uint32_t) (*criManaUnity_SetConfigParameters)(uint32_t graphicsApi, uint32_t numDecoders, uint32_t numMaxEntries, bool_t enableCuePoint);
 
     CAI(void) (*criManaUnity_Initialize)();
 
@@ -611,6 +612,17 @@ typedef struct _CriWareUnityApi {
     CAI(uint32_t) (*criAtomUnity_SetConfigAdditionalParameters_PC)(uint64_t a0);
 
     CAI(uint32_t) (*criManaUnity_SetConfigAdditionalParameters_ANDROID)(uint32_t a0);
+
+    CAI(uint32_t) (*criAtomUnitySequencer_ExecuteQueuedEventCallbacks)();
+
+    // criware_unity_plugin
+    CAI(uint32_t) (*UnityPluginLoad)(void *a0);
+
+    CAI(uint32_t) (*UnityPluginUnload)();
+
+    CAI(void) (*UnityRenderEvent)(void *a0);
+
+    CAI(uint32_t) (*UnitySetGraphicsDevice)(uint32_t a0, uint32_t a1, uint32_t a2);
 
 } CriWareUnityApi;
 

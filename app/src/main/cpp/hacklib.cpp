@@ -364,4 +364,10 @@ void ResolveFunctions() {
     r(criWareUnity_SetRenderingEventOffsetForMana);
     r(criAtomUnity_SetConfigAdditionalParameters_PC);
     r(criManaUnity_SetConfigAdditionalParameters_ANDROID);
+
+    // criware_unity_plugin
+    r(UnityPluginLoad);
+    r(UnityPluginUnload);
+    r(UnityRenderEvent);
+    r(UnitySetGraphicsDevice);
 }

@@ -27,3 +27,8 @@ uint32_t criManaUnity_SetConfigAdditionalParameters_ANDROID(uint32_t a0) {
        a0);
     return 0;
 }
+
+uint32_t criAtomUnitySequencer_ExecuteQueuedEventCallbacks() {
+    CR(criAtomUnitySequencer_ExecuteQueuedEventCallbacks);
+    return 0;
+}

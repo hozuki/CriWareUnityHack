@@ -4,7 +4,7 @@
 
 #include "../include/criware.h"
 
-void criManaUnity_SetConfigParameters(uint32_t graphicsApi, uint32_t numDecoders, uint32_t numMaxEntries, bool_t enableCuePoint) {
+uint32_t criManaUnity_SetConfigParameters(uint32_t graphicsApi, uint32_t numDecoders, uint32_t numMaxEntries, bool_t enableCuePoint) {
     CR(criManaUnity_SetConfigParameters,
        graphicsApi, numDecoders, numMaxEntries, enableCuePoint);
 }
