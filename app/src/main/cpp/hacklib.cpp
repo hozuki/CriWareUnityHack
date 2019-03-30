@@ -4,8 +4,10 @@
 
 #include <jni.h>
 #include <dlfcn.h>
-#include <string.h>
+#include <string>
 #include "include/criware.h"
+
+#define CURRENT_JNI_VERSION JNI_VERSION_1_6
 
 CriWareUnityApi CW_API_OBJECT_NAME = {0};
 void *g_GenuineLib = nullptr;
@@ -18,7 +20,7 @@ JNI_OnLoad(JavaVM *vm, void *reserved) {
     DEBUG_LOG("On load: lib handle = %p", g_GenuineLib);
     ResolveFunctions();
 
-    jint ret = JNI_VERSION_1_1;
+    jint ret = CURRENT_JNI_VERSION;
     if (CW_API_OBJECT_NAME.JNI_OnLoad) {
         ret = CW_API_OBJECT_NAME.JNI_OnLoad(vm, reserved);
     }
@@ -32,7 +34,7 @@ JNI_OnUnload(JavaVM *vm, void *reserved) {
         if (CW_API_OBJECT_NAME.JNI_OnUnload) {
             CW_API_OBJECT_NAME.JNI_OnUnload(vm, reserved);
         }
-        memset(&CW_API_OBJECT_NAME, sizeof(CriWareUnityApi), 0);
+        memset(&CW_API_OBJECT_NAME, 0, sizeof(CriWareUnityApi));
         dlclose(g_GenuineLib);
     }
 }
