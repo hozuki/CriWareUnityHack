@@ -41,7 +41,9 @@ add_library( # Sets the name of the library.
              src/main/cpp/lib/criware_fs_loader.cpp
              src/main/cpp/lib/criware_mana.cpp
              src/main/cpp/lib/criware_misc.cpp
-             src/main/cpp/lib/criware_unknown.cpp)
+             src/main/cpp/lib/criware_unity_plugin.cpp
+             src/main/cpp/lib/criware_unknown.cpp
+        )
 
 # Searches for a specified prebuilt library and stores the path as a
 # variable. Because CMake includes system libraries in the search path by
