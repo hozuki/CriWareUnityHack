@@ -6,11 +6,14 @@ The core code can be found at [`app/src/main/cpp`](app/src/main/cpp). To build t
 
 Default setup:
 
-- Android SDK version 23 (Android 6.0)
-- Build Tools 28.0.1
-- NDK r12b+
+- Android SDK version 27 (Android 8.1)
+- Build Tools 29-rc1
+- NDK r19c
+- Gradle 4.10.3
 
-If you don't have the tools of exactly these versions, you can edit `app/build.gradle` to adapt to your local environment. For NDK, it is always safe to use the latest version.
+If you don't have the tools of exactly these versions, you can edit `app/build.gradle` to adapt to your local environment. <del>For NDK, it is always safe to use the latest version.</del>
+It is not recommended to use components whose versions are different than above.
+When you update the components, please pay attention to warnings in Android Studio.
 
 Please follow the license.
 
